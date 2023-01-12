@@ -7,13 +7,16 @@ for ((i=1; i<=3; i++))
   do
     for ((j=4 - $i; j>0; j--))
     do
-      printf " "
+      printf " " # 찍히는 별 앞에 공백
     done
 
-    for ((k=0; k<$i \* 2 - 1; k++))
+    for ((k=0; k<$i \* 2 - 1; k++)) # \* 는 * 표시를 쓰기 위해서 앞에 escape 문자를 준다
     do
-      printf '*'
+      printf '*' # 별찍기 
+      # 1*2 -1 개 printf '*' -->   *
+      # 2*2 -1 개 printf '*' -->  ***
+      # 3*2 -1 개 printf '*' --> *****
     done
 
-    printf "\n"
+    printf "\n" # 다음 줄 (줄바꿈)
   done
